@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'candidacture',
     'entreprise',
     'notications',
+    'technologie',
     'rest_framework',
     'admin_soft.apps.AdminSoftDashboardConfig',
     'django.contrib.admin',
@@ -159,10 +160,6 @@ REST_FRAMEWORK = {
 }
 
 
-from decouple import config
-
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 
 #EMAIL_HOST_USER = config('EMAIL_HOST_USER')

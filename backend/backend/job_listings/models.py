@@ -2,10 +2,12 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
-from entreprise.models import entreprise  
+from entreprise.models import profilentreprise 
+from technologie.models import Technologie
 
 class JobListing(models.Model):
-    entreprise = models.ForeignKey(entreprise, on_delete=models.CASCADE)
+    entreprise = models.ForeignKey(profilentreprise , on_delete=models.CASCADE)
+    technologie= models.ForeignKey(Technologie , on_delete=models.CASCADE)
     location = models.CharField(max_length=100, blank=True, null=True)
     salary = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     publication_date = models.DateField(blank=True, null=True)
@@ -21,9 +23,9 @@ class JobListing(models.Model):
     job_status = models.CharField(
         max_length=20,
         choices=[
-            ('active', 'Active'),
-            ('closed', 'Closed'),
-            ('pending', 'Pending'),
+            ('active', 'Activer'),
+            ('closed', 'Fermer'),
+            ('pending', 'attend'),
         ],
         default='active',
     )
