@@ -1,0 +1,131 @@
+.hero .container {
+  padding-top:1;
+}
+.hero h1 {
+  color: #fff;
+  font-size: 60px;
+}
+.hero p {
+  color: hsl(0, 0%, 100%);
+  
+}
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 0px;
+  padding: 0 20px;
+  width: 70%;
+  margin-left: 20%;
+  
+}
+form input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid rgba(124, 10, 238, 0.274);
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  font-size: 20px;
+  color: black;
+}
+form .box {
+  padding: 10px;
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+@media screen and (max-width: 800px) {
+  .hero .container {
+    padding-top: 30%;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  form .box {
+    border-left: none;
+  }
+  form input {
+    width: 100%;
+  }
+}
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajustez la hauteur en fonction de vos besoins */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height:max-content;
+  width: 100%;
+}
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: #fff; /* Couleur du texte */
+  background: linear-gradient(to right, #061dcb, hsl(303, 96%, 40%));
+  opacity: 0.6; /* Ajustez l'opacité selon vos préférences */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.slide-title {
+  font-size: 3rem; 
+  text-align: center; 
+  display: flex; 
+  margin-top: 100px;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.slide-description {
+  font-size: 2rem; 
+  width:50%;
+  text-align: center; 
+  display: flex; 
+  margin-top: 100px;
+  align-items: center; 
+  justify-content: center;
+}
+/* Ajoutez ces styles dans votre fichier hero.css */
+
+/* Styles pour la description des diapositives */
+.slide-description-enter {
+  opacity: 0;
+  transform: translateX(-20px); /* Animation de départ, déplacement vers la gauche */
+}
+
+.slide-description-enter-active {
+  opacity: 1;
+  transform: translateX(0); /* Animation d'arrivée, rétablissement de la position initiale */
+  transition: opacity 1s, transform 1s;
+}
+
+.slide-description-exit {
+  opacity: 1;
+  transform: translateX(0); /* Animation de départ pour la sortie, sans modification */
+}
+
+.slide-description-exit-active {
+  opacity: 0;
+  transform: translateX(20px); /* Animation de sortie, déplacement vers la droite */
+  transition: opacity 1s, transform 1s;
+}

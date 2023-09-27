@@ -1,0 +1,18 @@
+.featured .box1 {
+  box-shadow: 0 0 10px 0 rgba(102, 78, 241, 0.18);
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  height: 300px;
+  
+}
+.box1:hover{
+  box-shadow: 0 0 30px 0 rgba(214, 9, 214, 0.18);
+
+}
+
+.featured img {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+}
